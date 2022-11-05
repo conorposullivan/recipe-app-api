@@ -6,7 +6,8 @@ ENV PYTHONUNBUFFERED 1
 COPY ./requirements.txt /tmp/requirements.txt
 COPY ./requirements.dev.txt /tmp/requirements.dev.txt
 COPY ./app /app
-WORKDIR 8000
+WORKDIR /app
+EXPOSE 8000
 
 ARG DEV=false
 RUN python -m venv /py && \
